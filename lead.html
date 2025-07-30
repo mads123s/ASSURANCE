@@ -1,79 +1,93 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Demande d'assurance - Valoris Business</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devis Assurance - Valoris Business</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background: linear-gradient(to bottom right, #f2f2f2, #e6e6ff);
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #1e3c72, #2a5298);
+            color: white;
+            text-align: center;
+        }
+        header {
             padding: 20px;
-            color: #333;
+            background-color: rgba(0,0,0,0.2);
+        }
+        h1 {
+            margin: 0;
+            font-size: 2em;
         }
         .form-container {
             background: white;
-            padding: 30px;
+            color: #333;
             max-width: 500px;
-            margin: auto;
+            margin: 30px auto;
+            padding: 20px;
             border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        }
-        h1 {
-            text-align: center;
-            color: #1e3c72;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
         }
         input, select, textarea {
             width: 100%;
-            padding: 12px;
-            margin-top: 10px;
-            margin-bottom: 20px;
-            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px 0;
             border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 1em;
         }
         button {
             background-color: #25D366;
             color: white;
-            padding: 12px;
+            padding: 12px 20px;
             border: none;
-            width: 100%;
             border-radius: 5px;
-            font-size: 16px;
+            font-size: 1em;
             cursor: pointer;
+            transition: background 0.3s;
         }
         button:hover {
             background-color: #1ebe57;
         }
-        .whatsapp {
-            display: block;
-            text-align: center;
+        .whatsapp-btn {
             margin-top: 20px;
+            display: inline-block;
+            background-color: #25D366;
+            color: white;
+            padding: 15px 25px;
             text-decoration: none;
-            color: #25D366;
+            border-radius: 50px;
             font-weight: bold;
         }
     </style>
 </head>
 <body>
+    <header>
+        <h1>Obtenez un Devis d'Assurance Gratuit</h1>
+        <p>Remplissez ce formulaire ou contactez-nous directement via WhatsApp</p>
+    </header>
+
     <div class="form-container">
-        <h1>Demande d'assurance</h1>
-        <form action="https://formspree.io/f/yourformid" method="POST">
-            <input type="text" name="Nom" placeholder="Votre nom" required>
-            <input type="tel" name="Téléphone" placeholder="Votre téléphone" required>
-            <select name="Type d'assurance" required>
+        <form action="https://formspree.io/f/moqgqwll" method="POST">
+            <input type="text" name="nom" placeholder="Votre nom" required>
+            <input type="tel" name="telephone" placeholder="Votre téléphone" required>
+            <select name="type-assurance" required>
                 <option value="">Type d'assurance</option>
-                <option>Auto</option>
-                <option>Maison</option>
-                <option>Santé</option>
-                <option>Voyage</option>
+                <option value="auto">Auto</option>
+                <option value="habitation">Habitation</option>
+                <option value="vie">Vie</option>
+                <option value="santé">Santé</option>
+                <option value="autre">Autre</option>
             </select>
-            <textarea name="Message" rows="4" placeholder="Message ou besoin spécifique"></textarea>
+            <textarea name="message" placeholder="Votre besoin en quelques mots..."></textarea>
             <button type="submit">Envoyer ma demande</button>
         </form>
-        <a class="whatsapp" href="https://wa.me/212635419426?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20une%20assurance." target="_blank">
-            📱 Contacter sur WhatsApp
-        </a>
     </div>
+
+    <a class="whatsapp-btn" href="https://wa.me/212635419426?text=Bonjour%20je%20souhaite%20recevoir%20un%20devis%20d'assurance" target="_blank">
+        📲 Demander via WhatsApp
+    </a>
 </body>
 </html>
